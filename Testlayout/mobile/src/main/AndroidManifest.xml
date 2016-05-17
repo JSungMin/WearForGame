@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fundoong.unitytest.testlayout" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name=".MyApplication">
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NickNameInput"
+            android:label="@string/app_name" >
+
+        </activity>
+        <activity
+            android:name=".SelectHand"
+            android:label="@string/app_name" >
+
+        </activity>
+        <activity android:name=".SelectMenu"
+            android:label="TestLayout">
+
+        </activity>
+        <service android:enabled="true" android:name="com.fundoong.unitytest.testlayout.MyService" >
+            <intent-filter>
+                <action android:name="com.test.service.SEND"/>
+            </intent-filter>
+        </service>
+        <service android:name=".DataLayerListenrService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
